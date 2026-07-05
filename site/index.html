@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FastVpn — быстрый VPN для iOS, Android и Windows</title>
+    <meta
+      name="description"
+      content="FastVpn: VLESS Reality, LTE/XHTTP, несколько стран и удобная подписка для Happ, Hiddify и v2RayTun."
+    />
+    <meta property="og:title" content="FastVpn — защищённый VPN-доступ" />
+    <meta
+      property="og:description"
+      content="Одна подписка, несколько стран, быстрый запуск через @Fastsave_VpN_bot."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#111b4f" />
+    <link rel="icon" href="./assets/fastvpn-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-effects" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <canvas id="network-canvas"></canvas>
+    </div>
+
+    <header class="hero">
+      <nav class="nav reveal">
+        <a class="brand" href="#top" aria-label="FastVpn">
+          <img class="brand-image" src="./assets/fastvpn-mark.svg" alt="" />
+          <span>FastVpn</span>
+        </a>
+        <div class="nav-links">
+          <a href="#plans">Тарифы</a>
+          <a href="#locations">Локации</a>
+          <a href="#setup">Подключение</a>
+          <a href="./profile.html">Профиль</a>
+          <a class="nav-button pulse-btn" href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">
+            @Fastsave_VpN_bot
+          </a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">VLESS Reality · XHTTP LTE · HTTPS subscription</p>
+          <h1 class="reveal reveal-delay-1">
+            <span class="gradient-text">Быстрый VPN</span> для всех устройств
+          </h1>
+          <p class="lead reveal reveal-delay-2">
+            FastVpn выдаёт одну подписку для Happ, Hiddify и v2RayTun. Внутри:
+            Нидерланды, Швейцария, Швеция и Финляндия.
+          </p>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a class="button primary pulse-btn" href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">
+              <span class="btn-icon">✈️</span>
+              Купить
+            </a>
+            <a class="button secondary" href="./profile.html">Мой профиль</a>
+          </div>
+          <div class="trust-row reveal reveal-delay-4" aria-label="Преимущества">
+            <span>Без сложной настройки</span>
+            <span>QR и подписка</span>
+            <span>Поддержка iOS</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="anim-frame">
+            <img class="anim-scene" src="./assets/anim-vpn-connect.svg" alt="Анимация подключения FastVpn" />
+            <div class="anim-badge">
+              <span class="status-dot"></span>
+              Online
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section showcase">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FastVpn в действии</p>
+          <h2>Живые анимации сервиса</h2>
+        </div>
+        <div class="showcase-grid">
+          <article class="showcase-card reveal">
+            <div class="showcase-media">
+              <img src="./assets/anim-vpn-connect.svg" alt="Защищённое подключение" />
+            </div>
+            <h3>Защищённый туннель</h3>
+            <p>Трафик идёт через FastVpn — от телефона до сервера по VLESS Reality.</p>
+          </article>
+          <article class="showcase-card reveal reveal-delay-1">
+            <div class="showcase-media">
+              <img src="./assets/anim-globe.svg" alt="Сервера по миру" />
+            </div>
+            <h3>4 страны в одной подписке</h3>
+            <p>Нидерланды, Швейцария, Швеция и Финляндия — переключайтесь в Happ.</p>
+          </article>
+          <article class="showcase-card reveal reveal-delay-2">
+            <div class="showcase-media">
+              <img src="./assets/anim-speed.svg" alt="Высокая скорость" />
+            </div>
+            <h3>Высокая скорость</h3>
+            <p>Reality и XHTTP LTE оптимизированы под Wi‑Fi и мобильный интернет.</p>
+          </article>
+          <article class="showcase-card showcase-wide reveal reveal-delay-3">
+            <div class="showcase-media">
+              <img src="./assets/anim-bot-buy.svg" alt="Покупка в Telegram боте" />
+            </div>
+            <h3>Покупка в @Fastsave_VpN_bot</h3>
+            <p>Выберите тариф, оплатите через ЮMoney — подписка и ссылка для Happ появятся сразу.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cards">
+        <article class="card reveal">
+          <span class="icon icon-bounce">⚡</span>
+          <h3>Быстро</h3>
+          <p>Минимум действий: оплатил в боте, получил подписку, добавил в приложение.</p>
+        </article>
+        <article class="card reveal reveal-delay-1">
+          <span class="icon icon-bounce">🛡️</span>
+          <h3>Безопасно</h3>
+          <p>VLESS Reality и XHTTP помогают держать соединение стабильным.</p>
+        </article>
+        <article class="card reveal reveal-delay-2">
+          <span class="icon icon-bounce">📱</span>
+          <h3>Удобно</h3>
+          <p>Работает в Happ на iOS и Windows, Hiddify, v2RayTun и других клиентах.</p>
+        </article>
+      </section>
+
+      <section id="locations" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Локации</p>
+          <h2>Сервера FastVpn</h2>
+        </div>
+        <div class="locations">
+          <div class="location-card reveal">
+            <span class="flag">🇳🇱</span>
+            <strong>Нидерланды</strong>
+            <span class="loc-meta">Reality / LTE</span>
+            <span class="ping"><span class="ping-dot"></span>12 ms</span>
+          </div>
+          <div class="location-card reveal reveal-delay-1">
+            <span class="flag">🇨🇭</span>
+            <strong>Швейцария</strong>
+            <span class="loc-meta">Reality / LTE</span>
+            <span class="ping"><span class="ping-dot"></span>18 ms</span>
+          </div>
+          <div class="location-card reveal reveal-delay-2">
+            <span class="flag">🇸🇪</span>
+            <strong>Швеция</strong>
+            <span class="loc-meta">Reality / LTE</span>
+            <span class="ping"><span class="ping-dot"></span>22 ms</span>
+          </div>
+          <div class="location-card reveal reveal-delay-3">
+            <span class="flag">🇫🇮</span>
+            <strong>Финляндия</strong>
+            <span class="loc-meta">Reality / LTE</span>
+            <span class="ping"><span class="ping-dot"></span>15 ms</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="plans" class="section plans">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Тарифы</p>
+          <h2>Выберите срок доступа</h2>
+        </div>
+        <div class="plan-grid">
+          <article class="plan reveal">
+            <h3>1 месяц</h3>
+            <p class="price">149 ₽</p>
+            <p>До 3 устройств, все страны.</p>
+            <a class="button plan-btn" href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">
+              Купить в боте
+            </a>
+          </article>
+          <article class="plan featured reveal reveal-delay-1">
+            <span class="plan-badge">Популярный</span>
+            <h3>3 месяца</h3>
+            <p class="price">399 ₽</p>
+            <p>Оптимальный вариант для постоянного использования.</p>
+            <a class="button primary plan-btn pulse-btn" href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">
+              Купить в боте
+            </a>
+          </article>
+          <article class="plan reveal reveal-delay-2">
+            <h3>1 год</h3>
+            <p class="price">1199 ₽</p>
+            <p>До 5 устройств, максимальная выгода.</p>
+            <a class="button plan-btn" href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">
+              Купить в боте
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section id="setup" class="section setup">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Подключение</p>
+          <h2>Как начать пользоваться</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
+            <span>1</span>
+            Откройте <a href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">@Fastsave_VpN_bot</a> и выберите тариф.
+          </li>
+          <li class="reveal reveal-delay-1">
+            <span>2</span>
+            Пополните баланс через ЮMoney и оплатите подписку.
+          </li>
+          <li class="reveal reveal-delay-2">
+            <span>3</span>
+            Скопируйте HTTPS-ссылку подписки или QR-код в <a href="./profile.html">профиле</a>.
+          </li>
+          <li class="reveal reveal-delay-3">
+            <span>4</span>
+            Добавьте ссылку в Happ, Hiddify или v2RayTun и включите VPN.
+          </li>
+        </ol>
+      </section>
+
+      <section class="section faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Частые вопросы</h2>
+        </div>
+        <details class="reveal">
+          <summary>Почему на iOS нужна HTTPS-ссылка?</summary>
+          <p>Happ на iOS не принимает небезопасные HTTP-подписки. Используйте HTTPS-домен или туннель.</p>
+        </details>
+        <details class="reveal reveal-delay-1">
+          <summary>Что выбрать: Reality или LTE?</summary>
+          <p>Reality обычно стабильнее. LTE/XHTTP полезен для мобильных сетей, если прямое подключение хуже работает.</p>
+        </details>
+        <details class="reveal reveal-delay-2">
+          <summary>Можно ли подключить несколько устройств?</summary>
+          <p>Да. Лимит зависит от тарифа и отображается в Telegram-боте @Fastsave_VpN_bot.</p>
+        </details>
+      </section>
+
+      <section class="cta reveal">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <h2>Готовы подключиться?</h2>
+        <p>Получите подписку FastVpn в Telegram за пару минут.</p>
+        <a class="button primary pulse-btn cta-btn" href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">
+          <span class="btn-icon">✈️</span>
+          Купить
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> FastVpn</span>
+      <div class="footer-links">
+        <a href="./profile.html">Профиль</a>
+        <a href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">@Fastsave_VpN_bot</a>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

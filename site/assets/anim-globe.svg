@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="FastVpn A5@25@K ?> <8@C">
+  <defs>
+    <linearGradient id="globeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="dotGlow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="#0a1028"/>
+  <circle cx="240" cy="170" r="95" fill="none" stroke="url(#globeGrad)" stroke-width="2" opacity="0.5"/>
+  <ellipse cx="240" cy="170" rx="95" ry="30" fill="none" stroke="rgba(56,189,248,0.25)" stroke-width="1">
+    <animateTransform attributeName="transform" type="rotate" from="0 240 170" to="360 240 170" dur="12s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="240" cy="170" rx="30" ry="95" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+  <ellipse cx="240" cy="170" rx="70" ry="95" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1">
+    <animateTransform attributeName="transform" type="rotate" from="0 240 170" to="360 240 170" dur="18s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Server nodes -->
+  <g filter="url(#dotGlow)">
+    <circle cx="175" cy="130" r="7" fill="#38bdf8"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="175" y="118" text-anchor="middle" fill="#94a3b8" font-size="10"><ó<ñ</text>
+    <circle cx="310" cy="145" r="7" fill="#8b5cf6"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <text x="310" y="133" text-anchor="middle" fill="#94a3b8" font-size="10"><è<í</text>
+    <circle cx="290" cy="210" r="7" fill="#34d399"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite"/></circle>
+    <text x="290" y="228" text-anchor="middle" fill="#94a3b8" font-size="10"><ø<ê</text>
+    <circle cx="190" cy="215" r="7" fill="#ec4899"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <text x="190" y="233" text-anchor="middle" fill="#94a3b8" font-size="10"><ë<î</text>
+  </g>
+  <!-- Connection arcs -->
+  <path d="M175,130 Q240,100 310,145" fill="none" stroke="rgba(56,189,248,0.4)" stroke-width="1.5" stroke-dasharray="6 8">
+    <animate attributeName="stroke-dashoffset" values="0;-28" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M310,145 Q280,180 290,210" fill="none" stroke="rgba(139,92,246,0.4)" stroke-width="1.5" stroke-dasharray="6 8">
+    <animate attributeName="stroke-dashoffset" values="0;-28" dur="1.5s" begin="0.4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M290,210 Q235,230 190,215" fill="none" stroke="rgba(52,211,153,0.4)" stroke-width="1.5" stroke-dasharray="6 8">
+    <animate attributeName="stroke-dashoffset" values="0;-28" dur="1.5s" begin="0.8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M190,215 Q180,170 175,130" fill="none" stroke="rgba(236,72,153,0.4)" stroke-width="1.5" stroke-dasharray="6 8">
+    <animate attributeName="stroke-dashoffset" values="0;-28" dur="1.5s" begin="1.2s" repeatCount="indefinite"/>
+  </path>
+  <text x="240" y="310" text-anchor="middle" fill="#64748b" font-size="13" font-family="Inter,sans-serif">4 AB@0=K · >4=0 ?>4?8A:0 FastVpn</text>
+</svg>

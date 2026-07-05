@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FastVpn — личный кабинет</title>
+    <meta name="description" content="Личный кабинет FastVpn: подписки, статистика, подключения VPN." />
+    <meta name="theme-color" content="#111b4f" />
+    <link rel="icon" href="./assets/fastvpn-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="profile-page">
+    <div class="bg-effects" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <canvas id="network-canvas"></canvas>
+    </div>
+
+    <header class="hero hero-compact">
+      <nav class="nav reveal visible">
+        <a class="brand" href="./index.html">
+          <img class="brand-image" src="./assets/fastvpn-mark.svg" alt="" />
+          <span>FastVpn</span>
+        </a>
+        <div class="nav-links">
+          <a href="./index.html#plans">Тарифы</a>
+          <a href="./index.html#locations">Локации</a>
+          <a href="./index.html#setup">Подключение</a>
+          <a href="./profile.html" class="nav-active">Профиль</a>
+          <a class="nav-button" href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">
+            @Fastsave_VpN_bot
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="cabinet-main">
+      <!-- Auth -->
+      <section id="auth-screen" class="cabinet-auth reveal visible">
+        <div class="auth-layout">
+          <div class="auth-visual anim-frame">
+            <img src="./assets/anim-vpn-connect.svg" alt="FastVpn подключение" />
+          </div>
+          <div class="auth-card profile-card">
+            <h1>Личный кабинет</h1>
+            <p class="muted">Войдите через Telegram или Email — данные синхронизируются с вашим VPN.</p>
+
+            <div class="auth-tabs">
+              <button type="button" class="tab-btn active" data-tab="tab-login">Вход</button>
+              <button type="button" class="tab-btn" data-tab="tab-register">Регистрация</button>
+            </div>
+
+            <div id="tab-login" class="tab-panel">
+              <form id="login-form" class="auth-form">
+                <label>Email<input id="login-email" type="email" required placeholder="you@mail.ru" /></label>
+                <label>Пароль<input id="login-password" type="password" required placeholder="••••••" /></label>
+                <button type="submit" class="button primary">Войти</button>
+              </form>
+            </div>
+
+            <div id="tab-register" class="tab-panel" hidden>
+              <form id="register-form" class="auth-form">
+                <label>Имя<input id="reg-name" type="text" placeholder="Как вас зовут" /></label>
+                <label>Email<input id="reg-email" type="email" required placeholder="you@mail.ru" /></label>
+                <label>Пароль<input id="reg-password" type="password" required minlength="6" placeholder="мин. 6 символов" /></label>
+                <button type="submit" class="button primary">Создать аккаунт</button>
+              </form>
+            </div>
+
+            <div class="auth-divider"><span>или</span></div>
+            <div id="telegram-login"></div>
+            <p id="auth-error" class="auth-error" hidden></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard -->
+      <section id="dashboard" class="cabinet-dashboard" hidden>
+        <div class="dash-header reveal visible">
+          <div>
+            <p class="eyebrow">FastVpn Profile</p>
+            <h1 id="user-name">—</h1>
+            <p id="user-meta" class="muted">—</p>
+          </div>
+          <div class="dash-actions">
+            <a class="button primary" href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">
+              <span class="btn-icon">✈️</span> Купить
+            </a>
+            <button type="button" id="logout-btn" class="button secondary">Выйти</button>
+          </div>
+        </div>
+
+        <div id="link-telegram-banner" class="link-banner reveal visible" hidden>
+          <div>
+            <strong>Привяжите Telegram</strong>
+            <p class="muted">Чтобы видеть подписки и баланс, войдите через Telegram или откройте бота.</p>
+          </div>
+          <div id="telegram-link-widget"></div>
+        </div>
+
+        <div class="stats-grid reveal visible">
+          <article class="stat-tile">
+            <span class="stat-label">Баланс</span>
+            <span id="stat-balance" class="stat-big">—</span>
+          </article>
+          <article class="stat-tile">
+            <span class="stat-label">Активных подписок</span>
+            <span id="stat-active" class="stat-big">0</span>
+          </article>
+          <article class="stat-tile">
+            <span class="stat-label">Всего подписок</span>
+            <span id="stat-total" class="stat-big">0</span>
+          </article>
+          <article class="stat-tile">
+            <span class="stat-label">Потрачено</span>
+            <span id="stat-spent" class="stat-big">0 ₽</span>
+          </article>
+        </div>
+
+        <div class="dash-grid">
+          <section class="dash-panel reveal visible">
+            <h2>Мои подписки</h2>
+            <p id="subs-empty" class="muted">Подписок пока нет. Купите VPN в Telegram-боте.</p>
+            <div id="subs-list" class="subs-list"></div>
+          </section>
+
+          <aside class="dash-side">
+            <section class="dash-panel reveal visible">
+              <h2>Подключения</h2>
+              <div id="connections-grid" class="connections-grid"></div>
+            </section>
+            <section class="dash-panel reveal visible">
+              <h2>Статистика</h2>
+              <div id="activity-list" class="activity-list"></div>
+            </section>
+            <div class="dash-visual anim-frame reveal visible">
+              <img src="./assets/anim-globe.svg" alt="Сервера FastVpn" />
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> FastVpn</span>
+      <div class="footer-links">
+        <a href="./index.html">Главная</a>
+        <a href="https://t.me/Fastsave_VpN_bot" target="_blank" rel="noopener">@Fastsave_VpN_bot</a>
+      </div>
+    </footer>
+
+    <script src="./js/api-config.js"></script>
+    <script src="./script.js"></script>
+    <script src="./js/cabinet.js"></script>
+  </body>
+</html>

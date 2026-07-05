@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label=">:C?:0 VPN 2 Telegram 1>B5">
+  <defs>
+    <linearGradient id="tgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#229ED9"/>
+    </linearGradient>
+    <filter id="msgGlow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="#0a1028"/>
+  <!-- Phone frame -->
+  <rect x="140" y="30" width="200" height="300" rx="28" fill="#111827" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <rect x="152" y="52" width="176" height="240" rx="12" fill="#0f172a"/>
+  <!-- Chat header -->
+  <rect x="152" y="52" width="176" height="36" rx="12" fill="#1e293b"/>
+  <circle cx="168" cy="70" r="10" fill="url(#tgGrad)"/>
+  <text x="184" y="74" fill="white" font-size="11" font-weight="700" font-family="Inter,sans-serif">FastVpn Bot</text>
+  <!-- Bot message -->
+  <g filter="url(#msgGlow)">
+    <rect x="160" y="100" width="130" height="44" rx="12" fill="#1e293b">
+      <animate attributeName="opacity" values="0;1;1;1" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="172" y="118" fill="#94a3b8" font-size="9" font-family="Inter,sans-serif">
+      <animate attributeName="opacity" values="0;1;1;1" dur="4s" repeatCount="indefinite"/>
+      K15@8B5 B0@8D =G
+    </text>
+    <rect x="172" y="124" width="50" height="12" rx="6" fill="#38bdf8" opacity="0.8">
+      <animate attributeName="opacity" values="0;0.8;0.8;0.8" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="228" y="124" width="50" height="12" rx="6" fill="#8b5cf6" opacity="0.8">
+      <animate attributeName="opacity" values="0;0.8;0.8;0.8" dur="4s" begin="0.7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- User tap -->
+  <g>
+    <rect x="220" y="160" width="96" height="32" rx="12" fill="url(#tgGrad)">
+      <animate attributeName="opacity" values="0;0;1;1" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="268" y="180" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="Inter,sans-serif">
+      <animate attributeName="opacity" values="0;0;1;1" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+      3 <5AOF0
+    </text>
+  </g>
+  <!-- Success message -->
+  <g>
+    <rect x="160" y="206" width="148" height="52" rx="12" fill="#1e293b" stroke="rgba(52,211,153,0.4)" stroke-width="1">
+      <animate attributeName="opacity" values="0;0;0;1" dur="4s" begin="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="172" y="226" fill="#34d399" font-size="10" font-weight="700" font-family="Inter,sans-serif">
+      <animate attributeName="opacity" values="0;0;0;1" dur="4s" begin="2.5s" repeatCount="indefinite"/>
+       >4?8A:0 0:B82=0!
+    </text>
+    <text x="172" y="244" fill="#94a3b8" font-size="9" font-family="Inter,sans-serif">
+      <animate attributeName="opacity" values="0;0;0;1" dur="4s" begin="2.7s" repeatCount="indefinite"/>
+      !AK;:0 4;O Happ 3>B>20
+    </text>
+  </g>
+  <!-- Tap cursor -->
+  <circle cx="268" cy="176" r="8" fill="none" stroke="white" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.8;0" dur="4s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;12;4" dur="4s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="240" y="340" text-anchor="middle" fill="#64748b" font-size="13" font-family="Inter,sans-serif">@Fastsave_VpN_bot · ?>:C?:0 70 1 <8=CBC</text>
+</svg>
